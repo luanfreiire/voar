@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Oleo+Script:wght@400;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-main: "Kantumruy Pro";
+    --font-title: "Oleo Script";
+    --main-color: #18143C;
+    --second-color: #f8a101;
+    --cinza-color: #D9D9D9;
+    --preto-color: #1B1E20;
+}
+
+body {
+    background-color: var(--main-color);
+    font-family: var(--font-main);
+}
+
+/*Logotipo*/
+.logotipo {
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 30vh;
+        margin: 1.25rem;
+    }
+}
+
+/*SEÇÃO BOXLOGIN*/
+/*Modal Principal*/
+.boxLogin {
+    display: flex;
+    justify-content: center;
+}
+
+.formLogin {
+    background-color: var(--second-color);
+    width: 50%;
+    height: 25rem;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px black;
+}
+
+/*Labels e Icones*/
+.iconesLogin {
+    display: flex;
+    align-items: center;
+    margin-left: 6.25rem;
+    margin-top: 2.13rem;
+
+    h3 {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 580;
+        color: var(--main-color);
+        margin-right: 10px;
+    }
+
+    i {
+        font-size: 20px;
+        color: var(--main-color);
+    }
+}
+
+/*Icone VER/ESCONDER senha*/
+.ver {
+    position: absolute;
+    right: 30rem;
+    top: 24.38rem;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.380);
+    cursor: pointer;
+}
+
+/*Inputs de Login*/
+.formLogin {
+    input {
+        margin-left: 5.25rem;
+        margin-top: 10px;
+        width: 70%;
+        height: 50px;
+        padding: 10px;
+        font-family: var(--font-main);
+        font-weight: bold;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        box-shadow: 4px 4px 10px black;
+    }
+}
+
+/*CheckBox Lembre-se*/
+.optionsExtras {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+
+    input {
+        width: 1rem;
+        height: 1rem;
+        box-shadow: none;
+    }
+
+    p {
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+}
+
+/*BTN Esqueceu sua Senha ?*/
+.esqueceuSenha {
+    p {
+        margin-left: 12rem;
+        font-style: italic;
+        cursor: pointer;
+    }
+}
+
+/*BTN Entrar*/
+.btnEntrar {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    button {
+        width: 40%;
+        height: 50px;
+        background-color: var(--main-color);
+        outline: none;
+        border: none;
+        border-radius: 50px;
+        font-size: 22px;
+        color: var(--second-color);
+        font-family: var(--font-main);
+        font-weight: bold;
+        font-style: italic;
+        box-shadow: 2px 2px 4px black;
+        cursor: pointer;
+    }
+
+    button:active {
+        transform: translateY(4px);
+    }
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem;
+    color: #fff;
+
+    u {
+        color: black;
+        cursor: pointer;
+    }
+}
+
+/*BTN Cadastre-se*/
+.linkCadastrar {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    p {
+        font-family: var(--font-main);
+        font-weight: bold;
+        font-style: italic;
+        color: var(--main-color);
+        cursor: pointer;
+    }
+}
+
+/*RESPONSIVIDADE*/
+
+@media(max-width: 430px) {
+
+    /*Logotipo*/
+    .logotipo img {
+        width: 22vh;
+    }
+
+    /*BG Box Principal*/
+    .formLogin {
+        width: 90%;
+        height: auto;
+    }
+
+    /*Labels e Icones*/
+    .iconesLogin {
+        margin-left: 2rem;
+    }
+
+    /*Inputs*/
+    .formLogin {
+        input {
+            margin-left: 2rem;
+            width: 80%;
+        }
+    }
+
+    /*Ver/Esconder Senha*/
+    .ver {
+        display: none;
+    }
+
+    /*CheckBox Lembre-se*/
+    .optionsExtras {
+        input {
+            width: 1rem;
+        }
+    }
+
+    /*BTN Esqueceu Senha*/
+    .esqueceuSenha {
+        p {
+            margin-left: 3rem;
+        }
+    }
+
+    /*BTN Entrar*/
+    .btnEntrar {
+        margin-top: 1.88rem;
+
+        button {
+            width: 65%;
+        }
+    }
+
+    /*BTN Cadastre-se*/
+    .linkCadastrar {
+        margin: 1.25rem;
+    }
+
+    /*Rodapé*/
+    .rodape {
+        margin: 2rem;
+    }
+}
