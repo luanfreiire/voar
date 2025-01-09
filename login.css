@@ -78,6 +78,16 @@ body {
     cursor: pointer;
 }
 
+.esconder {
+    display: none;
+    position: absolute;
+    right: 30rem;
+    top: 24.38rem;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.380);
+    cursor: pointer;
+}
+
 /*Inputs de Login*/
 .formLogin {
     input {
