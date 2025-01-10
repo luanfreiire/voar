@@ -11,7 +11,7 @@
 <body>
     <section class="logotipo">
         <a href="#">
-        <img src="img/logo sem fundo.png" alt="logotipo voar.com">
+            <img src="img/logo sem fundo.png" alt="logotipo voar.com">
         </a>
     </section>
 
@@ -38,8 +38,9 @@
                 <div class="optionsExtras">
                     <input type="checkbox" onclick="salvarEmail()" id="checkBoxSalvar">
                     <p>Lembre-se</p>
+
                     <div class="esqueceuSenha">
-                        <p>
+                        <p onclick="btnEsqueceu()">
                             <u>Esqueceu sua Senha ?</u>
                         </p>
                     </div>
@@ -57,6 +58,37 @@
             </form>
         </div>
 
+    </section>
+
+    <!--Seção Modal Esqueceu Senha -->
+    <section class="modalEsqueceuSenha">
+
+        <div class="mainModalEsqueceu">
+
+            <div class="iconesEsqueceuSenha">
+                <h2>Email</h2>
+                <i class="bi bi-envelope-fill"></i>
+
+                <div class="arrowReturn">
+                    <i class="bi bi-arrow-bar-left arrowReturn" onclick="btnReturn()"></i>
+                </div>
+
+            </div>
+            <input type="email" placeholder="Digite seu email . . .">
+
+            <div class="iconesEsqueceuSenha">
+                <h2>Confirmar Email</h2>
+                <i class="bi bi-person-check-fill"></i>
+            </div>
+            <input type="email" placeholder="Confirmar Email">
+
+            <p>Ao digitar um email válido, você receberá um email com instruções para recuperação de senha.</p>
+            
+            <div class="btnRecuperarSenha">
+                <button>Recuperar Senha</button>
+            </div>
+
+        </div>
     </section>
 
     <footer>

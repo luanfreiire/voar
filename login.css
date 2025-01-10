@@ -186,6 +186,96 @@ body {
     }
 }
 
+/*Modal Esqueceu Senha*/
+.modalEsqueceuSenha{
+    display: none;
+    justify-content: center;
+}
+
+.mainModalEsqueceu{
+    background-color: var(--second-color);
+    width: 50%;
+    height: 19.5rem;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px black;
+}
+
+/*Icones e Labels Esqueceu Senha*/
+.iconesEsqueceuSenha{
+    display: flex;
+    align-items: center;
+    margin-top: 1.25rem;
+    margin-left: 2.50rem;
+    h2{
+        font-style: italic;
+        font-size: 20px;
+    }
+
+    i{
+        padding-left: 10px;
+        font-size: 22px;
+        color: var(--main-color);
+    }
+}
+
+.mainModalEsqueceu{
+    /*Inputs Esqueceu Senha*/
+    input{
+        background-color: var(--cinza-color);
+        font-family: var(--font-main);
+        font-weight: bold;
+        margin-left: 1.25rem;
+        width: 80%;
+        height: 3.13rem;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        padding: 12px;
+    }
+
+    /*Paragrafo do Modal*/
+    p{
+        max-width: 75%;
+        margin:10px 30px;
+        opacity: 0.5;
+    }
+}
+
+/*Botão de Retornar*/
+.arrowReturn{
+    margin-left: 73%;
+
+    i{
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+/*Botão Recuperar Senha*/
+.btnRecuperarSenha{
+    display: flex;
+    justify-content: center;
+
+    button{
+        width: 50%;
+        height: 2.50rem;
+        background-color: var(--main-color);
+        border: none;
+        border-radius: 30px;
+        box-shadow: 4px 4px 5px black;
+        font-family: var(--font-main);
+        font-weight: bold;
+        font-size: 20px;
+        color: var(--second-color);
+        outline: none;
+        cursor: pointer;
+    }
+
+    button:active{
+        transform: translateY(5px);
+    }
+}
+
 /*RESPONSIVIDADE*/
 
 @media(max-width: 430px) {
@@ -250,5 +340,25 @@ body {
     /*Rodapé*/
     .rodape {
         margin: 2rem;
+    }
+
+    /*Seção Modal Esqueceu Senha*/
+    .mainModalEsqueceu{
+        width: 90%;
+        height:20.5rem;
+        
+        input{
+            width: 90%;
+        }
+
+        p{
+            font-size: 14px;
+            max-width: 90%;
+        }
+    }
+
+    .arrowReturn{
+        margin-left: 55%;
+        margin-bottom: 10px;
     }
 }

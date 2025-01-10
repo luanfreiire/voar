@@ -68,3 +68,21 @@ checkBox.addEventListener("change", () => {
         document.getElementById("email").value = "";
     }
 })
+
+//Abrir Modal Esqueceu Senha//
+btnEsqueceu = () => {
+    let modalLogin = document.querySelector (".boxLogin");
+    let modalEsqueceuSenha = document.querySelector (".modalEsqueceuSenha");
+
+    modalEsqueceuSenha.style.display = "flex";
+    modalLogin.style.display = "none";
+}
+
+//Fechar Modal Esqueceu Senha//
+btnReturn = () => {
+    let modalLogin = document.querySelector (".boxLogin");
+    let modalEsqueceuSenha = document.querySelector (".modalEsqueceuSenha");
+
+    modalLogin.style.display = "flex";
+    modalEsqueceuSenha.style.display = "none";
+}
