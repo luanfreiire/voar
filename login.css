@@ -101,7 +101,6 @@ body {
         border-radius: 20px;
         outline: none;
         border: none;
-        box-shadow: 4px 4px 10px black;
     }
 }
 
@@ -187,12 +186,12 @@ body {
 }
 
 /*Modal Esqueceu Senha*/
-.modalEsqueceuSenha{
+.modalEsqueceuSenha {
     display: none;
     justify-content: center;
 }
 
-.mainModalEsqueceu{
+.mainModalEsqueceu {
     background-color: var(--second-color);
     width: 50%;
     height: 19.5rem;
@@ -201,26 +200,28 @@ body {
 }
 
 /*Icones e Labels Esqueceu Senha*/
-.iconesEsqueceuSenha{
+.iconesEsqueceuSenha {
     display: flex;
     align-items: center;
     margin-top: 1.25rem;
     margin-left: 2.50rem;
-    h2{
+
+    h2 {
         font-style: italic;
         font-size: 20px;
     }
 
-    i{
+    i {
         padding-left: 10px;
         font-size: 22px;
         color: var(--main-color);
     }
 }
 
-.mainModalEsqueceu{
+.mainModalEsqueceu {
+
     /*Inputs Esqueceu Senha*/
-    input{
+    input {
         background-color: var(--cinza-color);
         font-family: var(--font-main);
         font-weight: bold;
@@ -234,29 +235,29 @@ body {
     }
 
     /*Paragrafo do Modal*/
-    p{
+    p {
         max-width: 75%;
-        margin:10px 30px;
+        margin: 10px 30px;
         opacity: 0.5;
     }
 }
 
 /*Botão de Retornar*/
-.arrowReturn{
+.arrowReturn {
     margin-left: 73%;
 
-    i{
+    i {
         font-size: 24px;
         cursor: pointer;
     }
 }
 
 /*Botão Recuperar Senha*/
-.btnRecuperarSenha{
+.btnRecuperarSenha {
     display: flex;
     justify-content: center;
 
-    button{
+    button {
         width: 50%;
         height: 2.50rem;
         background-color: var(--main-color);
@@ -271,8 +272,67 @@ body {
         cursor: pointer;
     }
 
-    button:active{
+    button:active {
         transform: translateY(5px);
+    }
+}
+
+/*Seção de Sucesso na Recuperação de Senha */
+.contentSucesso {
+    display: none;
+}
+
+.headerSucesso {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+    i {
+        font-size: 50px;
+        color: rgb(2, 102, 2);
+    }
+}
+
+.mainSucesso {
+    display: flex;
+    justify-content: center;
+
+    h3 {
+        color: rgb(2, 102, 2);
+    }
+}
+
+.footerSucesso {
+    display: flex;
+    justify-content: center;
+
+    p {
+        font-weight: bold;
+        opacity: 1;
+        text-align: center;
+    }
+}
+
+.btnRetorno {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+
+    button {
+        width: 60%;
+        height: 50px;
+        background-color: var(--main-color);
+        border: none;
+        border-radius: 30px;
+        font-size: 22px;
+        color: var(--second-color);
+        outline: none;
+        box-shadow: 4px 4px 6px black;
+        cursor: pointer;
+    }
+
+    button:active {
+        transform: translateY(7px);
     }
 }
 
@@ -343,22 +403,29 @@ body {
     }
 
     /*Seção Modal Esqueceu Senha*/
-    .mainModalEsqueceu{
+    .mainModalEsqueceu {
         width: 90%;
-        height:20.5rem;
-        
-        input{
+        height: 20.5rem;
+
+        input {
             width: 90%;
         }
 
-        p{
+        p {
             font-size: 14px;
             max-width: 90%;
         }
     }
 
-    .arrowReturn{
+    .arrowReturn {
         margin-left: 55%;
         margin-bottom: 10px;
+    }
+
+    /*Seção Mensagem de Sucesso na Recuperação de Senha */
+    .btnRetorno {
+        button {
+            width: 80%;
+        }
     }
 }

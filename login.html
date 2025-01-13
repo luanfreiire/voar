@@ -64,29 +64,37 @@
     <section class="modalEsqueceuSenha">
 
         <div class="mainModalEsqueceu">
+            <div class="contentEsqueceuSenha">
 
-            <div class="iconesEsqueceuSenha">
-                <h2>Email</h2>
-                <i class="bi bi-envelope-fill"></i>
+                <div class="iconesEsqueceuSenha">
+                    <h2>Email</h2>
+                    <i class="bi bi-envelope-fill"></i>
 
-                <div class="arrowReturn">
-                    <i class="bi bi-arrow-bar-left arrowReturn" onclick="btnReturn()"></i>
+                    <div class="arrowReturn">
+                        <i class="bi bi-arrow-bar-left arrowReturn" onclick="btnReturn()"></i>
+                    </div>
+
+                </div>
+                <input type="email" placeholder="Digite seu email . . . (admin)" id="inputEmail">
+
+                <div class="iconesEsqueceuSenha">
+                    <h2>Confirmar Email</h2>
+                    <i class="bi bi-person-check-fill"></i>
+                </div>
+                <input type="email" placeholder="Confirmar Email (admin)" id="inputConfirmarEmail">
+
+                <p>Ao digitar um email válido, você receberá um email com instruções para recuperação de senha.</p>
+
+                <div class="btnRecuperarSenha">
+                    <button onclick="btnRecuperarSenha()">Recuperar Senha</button>
                 </div>
 
             </div>
-            <input type="email" placeholder="Digite seu email . . .">
 
-            <div class="iconesEsqueceuSenha">
-                <h2>Confirmar Email</h2>
-                <i class="bi bi-person-check-fill"></i>
+            <div class="contentSucesso" id="contentSucesso">
             </div>
-            <input type="email" placeholder="Confirmar Email">
 
-            <p>Ao digitar um email válido, você receberá um email com instruções para recuperação de senha.</p>
-            
-            <div class="btnRecuperarSenha">
-                <button>Recuperar Senha</button>
-            </div>
+        </div>
 
         </div>
     </section>

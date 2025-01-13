@@ -18,7 +18,8 @@ logar = () => {
     }
 }
 
-//Função de Visualizar Senha //
+//Seção Ver, Esconder Senha //
+//Visualizar Senha//
 verSenha = () => {
     let verSenha = document.getElementById("senha");
     verSenha.type = "text";
@@ -30,13 +31,13 @@ verSenha = () => {
     btnVerSenha.style.display = "none";
 }
 
-//Função Esconder Senha//
+//Esconder Senha//
 esconderSenha = () => {
     let verSenha = document.getElementById("senha");
     verSenha.type = "password";
 
-    let btnVerSenha = document.querySelector (".ver");
-    let btnEsconderSenha =  document.querySelector (".esconder");
+    let btnVerSenha = document.querySelector(".ver");
+    let btnEsconderSenha = document.querySelector(".esconder");
 
     btnVerSenha.style.display = "block";
     btnEsconderSenha.style.display = "none";
@@ -51,7 +52,7 @@ salvarEmail = () => {
 //Carregar Email Salvo//
 window.onload = () => {
     let emailSalvo = localStorage.getItem("emailSalvo");
-    if(emailSalvo){
+    if (emailSalvo) {
         document.getElementById("email").value = emailSalvo;
     } else {
         document.getElementById("email").value = "";
@@ -63,26 +64,72 @@ const checkBox = document.getElementById("checkBoxSalvar");
 const chaveLocalStorage = "emailSalvo";
 
 checkBox.addEventListener("change", () => {
-    if(!checkBox.checked){
+    if (!checkBox.checked) {
         localStorage.removeItem(chaveLocalStorage);
         document.getElementById("email").value = "";
     }
 })
 
-//Abrir Modal Esqueceu Senha//
+//Seção Modal Esqueceu Senha //
+//Abrir Modal//
 btnEsqueceu = () => {
-    let modalLogin = document.querySelector (".boxLogin");
-    let modalEsqueceuSenha = document.querySelector (".modalEsqueceuSenha");
+    let modalLogin = document.querySelector(".boxLogin");
+    let modalEsqueceuSenha = document.querySelector(".modalEsqueceuSenha");
 
     modalEsqueceuSenha.style.display = "flex";
     modalLogin.style.display = "none";
 }
 
-//Fechar Modal Esqueceu Senha//
+//Fechar Modal//
 btnReturn = () => {
-    let modalLogin = document.querySelector (".boxLogin");
-    let modalEsqueceuSenha = document.querySelector (".modalEsqueceuSenha");
+    let modalLogin = document.querySelector(".boxLogin");
+    let modalEsqueceuSenha = document.querySelector(".modalEsqueceuSenha");
 
     modalLogin.style.display = "flex";
     modalEsqueceuSenha.style.display = "none";
+}
+
+//BTN Recuperar Senha//
+btnRecuperarSenha = () => {
+    let inputEmail = document.getElementById("inputEmail").value;
+    let inputConfirmarEmail = document.getElementById("inputConfirmarEmail").value;
+    let contentEsqueceuSenha = document.querySelector(".contentEsqueceuSenha");
+    let contentSucesso = document.getElementById ("contentSucesso");
+
+    if (inputEmail == "admin" && inputConfirmarEmail == "admin") {
+        contentEsqueceuSenha.style.display = "none";
+        contentSucesso.style.display = "block";
+
+        //Função Mensagem de Sucesso//
+        msgSucessoEmail = () => {
+            const contentSucesso = document.getElementById("contentSucesso");
+        
+            contentSucesso.innerHTML = `
+                <div class="headerSucesso">
+                    <i class="bi bi-envelope-check-fill"></i>
+                </div>
+        
+                <div class="mainSucesso">
+                    <h3>Email enviado com Sucesso !</h3>
+                </div>
+        
+                <div class="footerSucesso">
+                    <p>Verifique sua caixa Principal e Spam. No email haverá um link para alteração de Senha.</p>
+                 </div>
+        
+                <div class="btnRetorno">
+                    <button onclick="btnReturn()">Voltar</button>
+                </div>`
+        }
+        msgSucessoEmail ();
+
+        document.getElementById("inputEmail").value = ""
+        document.getElementById("inputConfirmarEmail").value = "";
+        
+    }else{
+        alert ("Email inválido, por favor tente novamente.");
+
+        document.getElementById("inputEmail").value = ""
+        document.getElementById("inputConfirmarEmail").value = "";
+    }
 }
