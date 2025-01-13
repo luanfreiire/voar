@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="linkCadastrar">
-                    <p>
+                    <p onclick="btnCadastrar()">
                         <u>Cadastre-se</u>
                     </p>
                 </div>
@@ -91,11 +91,45 @@
 
             </div>
 
+            <!--Mensagem de Sucesso na Recuperação de Senha-->
             <div class="contentSucesso" id="contentSucesso">
             </div>
 
         </div>
 
+    </section>
+
+    <!--Modal Cadastro-->
+    <section class="modalCadastrar">
+        <div class="boxCadastro">
+
+            <div class="inputsCadastro">
+                <h3>Nome Completo</h3>
+                <i class="bi bi-person-fill"></i>
+            </div>
+            <input type="text" placeholder="Digite seu Nome Completo">
+
+            <div class="inputsCadastro">
+                <h3>Email</h3>
+                <i class="bi bi-envelope-fill"></i>
+            </div>
+            <input type="email" placeholder="Digite seu email">
+
+            <div class="inputsCadastro">
+                <h3>Crie sua Senha</h3>
+                <i class="bi bi-shield-lock-fill"></i>
+            </div>
+            <input type="password" placeholder="Crie uma Senha">
+
+            <div class="inputsCadastro">
+                <h3>Confirmar Senha</h3>
+                <i class="bi bi-shield-fill-check"></i>
+            </div>
+            <input type="password" placeholder="Confirmar Senha">
+
+            <div class="btnCadastrar">
+                <button>Cadastre-se</button>
+            </div>
         </div>
     </section>
 

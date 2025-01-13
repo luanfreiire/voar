@@ -336,6 +336,66 @@ body {
     }
 }
 
+.modalCadastrar {
+    display: none;
+    justify-content: center;
+
+    .boxCadastro {
+        background-color: var(--second-color);
+        width: 40%;
+        border-radius: 20px;
+    }
+
+    input {
+        background-color: var(--cinza-color);
+        font-family: var(--font-main);
+        font-weight: bold;
+        margin-left: 1.25rem;
+        width: 80%;
+        height: 3.13rem;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        padding: 12px;
+    }
+
+    .inputsCadastro {
+        display: flex;
+        font-style: italic;
+        margin-left: 33px;
+        margin-top: 18px;
+        align-items: center;
+
+        i {
+            margin-left: 12px;
+            font-size: 22px;
+        }
+    }
+}
+
+.btnCadastrar {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+
+    button {
+        width: 60%;
+        height: 50px;
+        background-color: var(--main-color);
+        border: none;
+        border-radius: 30px;
+        font-size: 22px;
+        color: #fff;
+        outline: none;
+        box-shadow: 4px 4px 6px black;
+        cursor: pointer;
+    }
+
+    button:active {
+        transform: translateY(7px);
+    }
+}
+
 /*RESPONSIVIDADE*/
 
 @media(max-width: 430px) {

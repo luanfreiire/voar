@@ -133,3 +133,11 @@ btnRecuperarSenha = () => {
         document.getElementById("inputConfirmarEmail").value = "";
     }
 }
+
+btnCadastrar = () => {
+    let modalLogin = document.querySelector (".boxLogin");
+    let modalCadastrar = document.querySelector (".modalCadastrar");
+
+    modalLogin.style.display = "none";
+    modalCadastrar.style.display = "flex";
+}
