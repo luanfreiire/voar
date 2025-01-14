@@ -194,7 +194,7 @@ body {
 .mainModalEsqueceu {
     background-color: var(--second-color);
     width: 50%;
-    height: 19.5rem;
+    padding: 30px;
     border-radius: 20px;
     box-shadow: 8px 8px 10px black;
 }
@@ -256,6 +256,7 @@ body {
 .btnRecuperarSenha {
     display: flex;
     justify-content: center;
+    margin: 20px;
 
     button {
         width: 50%;
@@ -277,7 +278,7 @@ body {
     }
 }
 
-/*Seção de Sucesso na Recuperação de Senha */
+/*Mensagem de Sucesso na Recuperação de Senha */
 .contentSucesso {
     display: none;
 }
@@ -336,59 +337,77 @@ body {
     }
 }
 
-.modalCadastrar {
+.secaoCadastrese {
     display: none;
     justify-content: center;
+}
 
-    .boxCadastro {
-        background-color: var(--second-color);
-        width: 40%;
-        border-radius: 20px;
-        color: var(--main-color);
-    }
+.labelsIcons {
+    display: flex;
+    align-items: center;
+    margin: 10px 40px;
+    color: var(--main-color);
 
-    input {
-        background-color: var(--cinza-color);
-        font-family: var(--font-main);
-        font-weight: bold;
-        margin-left: 1.25rem;
-        width: 80%;
-        height: 3.13rem;
-        border-radius: 20px;
-        outline: none;
-        border: none;
-        padding: 12px;
-    }
-
-    .inputsCadastro {
-        display: flex;
-        font-style: italic;
-        margin-left: 33px;
-        margin-top: 18px;
-        align-items: center;
-
-        i {
-            margin-left: 12px;
-            font-size: 22px;
-        }
+    i {
+        font-size: 25px;
+        margin-left: 10px;
     }
 }
 
-.btnCadastrar {
-    display: flex;
+.returnCadastrese {
+    position: absolute;
+    right: 380px;
+
+    i{
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+
+/*Mensagem Sucesso Cadastro*/
+.msgSucessoCadastro {
+    display: none;
     justify-content: center;
-    margin: 20px;
+}
+
+.contentSucessoCadastro {
+    background-color: var(--second-color);
+    width: 50%;
+    height: 300px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px black;
+}
+
+.mainSucessoCadastro {
+    text-align: center;
+    margin: 10px;
+
+    i{
+        font-size: 50px;
+        color:rgb(2, 102, 2);
+    }
+
+    h2 {
+        color: rgb(2, 102, 2);
+    }
+
+    p{
+        font-weight: bold;
+    }
 
     button {
+        margin-top: 30px;
+        background-color: var(--main-color);
         width: 60%;
         height: 50px;
-        background-color: var(--main-color);
-        border: none;
-        border-radius: 30px;
-        font-size: 22px;
-        color: #fff;
         outline: none;
-        box-shadow: 4px 4px 6px black;
+        border: none;
+        border-radius: 20px;
+        font-family: var(--font-main);
+        font-weight: bold;
+        color: #f8a101;
+        font-size: 22px;
         cursor: pointer;
     }
 
@@ -396,27 +415,6 @@ body {
         transform: translateY(7px);
     }
 }
-
-.btnVoltarCadastro {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-
-    button {
-        width: 30%;
-        height: 30px;
-        background: none;
-        outline: none;
-        border: none;
-        font-family: var(--font-main);
-        font-weight: bold;
-        font-style: italic;
-        font-size: 20px;
-        color: var(--main-color);
-        cursor: pointer;
-    }
-}
-
 /*RESPONSIVIDADE*/
 
 @media(max-width: 430px) {
@@ -505,19 +503,6 @@ body {
 
     /*BTN de Retorno na Mensagem de Sucesso na Recuperação de Senha */
     .btnRetorno {
-        button {
-            width: 80%;
-        }
-    }
-
-    /*Modal Cadastre-se */
-    .modalCadastrar {
-        .boxCadastro {
-            width: 80%;
-        }
-    }
-
-    .btnCadastrar {
         button {
             width: 80%;
         }

@@ -94,7 +94,7 @@ btnRecuperarSenha = () => {
     let inputEmail = document.getElementById("inputEmail").value;
     let inputConfirmarEmail = document.getElementById("inputConfirmarEmail").value;
     let contentEsqueceuSenha = document.querySelector(".contentEsqueceuSenha");
-    let contentSucesso = document.getElementById ("contentSucesso");
+    let contentSucesso = document.getElementById("contentSucesso");
 
     if (inputEmail == "admin" && inputConfirmarEmail == "admin") {
         contentEsqueceuSenha.style.display = "none";
@@ -103,7 +103,7 @@ btnRecuperarSenha = () => {
         //Função Mensagem de Sucesso//
         msgSucessoEmail = () => {
             const contentSucesso = document.getElementById("contentSucesso");
-        
+
             contentSucesso.innerHTML = `
                 <div class="headerSucesso">
                     <i class="bi bi-envelope-check-fill"></i>
@@ -121,54 +121,77 @@ btnRecuperarSenha = () => {
                     <button onclick="btnReturn()">Voltar</button>
                 </div>`
         }
-        msgSucessoEmail ();
+        msgSucessoEmail();
 
         document.getElementById("inputEmail").value = ""
         document.getElementById("inputConfirmarEmail").value = "";
-        
-    }else{
-        alert ("Email inválido, por favor tente novamente.");
+
+    } else {
+        alert("Email inválido, por favor tente novamente.");
 
         document.getElementById("inputEmail").value = ""
         document.getElementById("inputConfirmarEmail").value = "";
     }
 }
 
-//Seção Modal Cadastre-se//
+//Seção Modal Cadastre-se //
 
-//Abrir Modal//
+// Abrir Modal Cadastre-se //
 btnCadastrar = () => {
-    let modalLogin = document.querySelector (".boxLogin");
-    let modalCadastrar = document.querySelector (".modalCadastrar");
+    let modalLogin = document.querySelector(".boxLogin");
+    let modalCadastrese = document.querySelector(".secaoCadastrese");
 
     modalLogin.style.display = "none";
-    modalCadastrar.style.display = "flex";
+    modalCadastrese.style.display = "flex";
 }
 
-//Validar Cadastro//
-validarCadastro = () => { // ATENÇÃO NECESSÁRIA //
-    let inputNome = document.getElementById("inputCadastroNome").value;
-    let inputEmail = document.getElementById("inputCadastroEmail").value;
-    let inputSenha = document.getElementById("inputCadastroSenha").value;
+// Btn voltar ao modal Login //
+returnCadastrese = () => {
+    let modalLogin = document.querySelector(".boxLogin");
+    let modalCadastrese = document.querySelector(".secaoCadastrese");
 
-    if(inputNome != "" && inputEmail == "admin" && inputSenha == "admin"){
-        alert("Sucesso ! Seu cadastro foi confirmado.");
+    modalLogin.style.display = "flex";
+    modalCadastrese.style.display = "none";
+}
 
-        document.getElementById("inputCadastroNome").value = "";
-        document.getElementById("inputCadastroEmail").value = "";
-        document.getElementById("inputCadastroSenha").value = "";
+//Validação Cadastro //
+validarCadastro = () => {
+    let inputsCadastro = document.getElementById("inputCadastro").value;
+
+    if (inputsCadastro != "") {
+        let modalCadastrese = document.querySelector(".secaoCadastrese");
+        let modalSucessoCadastro = document.getElementById("msgSucessoCadastro");
+
+        modalSucessoCadastro.style.display = "flex";
+        modalCadastrese.style.display = "none";
+
+        msgSucessoCadastro = () => {
+            const contentSucessoCadastro = document.querySelector(".contentSucessoCadastro");
+
+            contentSucessoCadastro.innerHTML = `
+            
+            <div class="mainSucessoCadastro">
+                <i class="bi bi-person-check-fill"></i>
+                <h2>Cadastro Confirmado !</h2>
+                <p>Parabéns, seu cadastro foi realizado com sucesso ! Verifique seu email para confirmação.</p>
+                <button onclick="fecharModalCadastrese()">
+                    <u>Voltar</u>
+                </button>
+            </div>`
+        }
+        msgSucessoCadastro();
+        document.getElementById("inputCadastro").value = "";
 
     }else {
-        alert ("Algo não foi preenchido corretamente, tente novamente. (email:admin, senhas:admin)");
+        alert("Desculpe, algum campo não foi preenchido, tente novamente.")
     }
 }
 
-
-//BTN Voltar modal cadastre-se à Login//
-returnCadastro = () => {
+//BTN Voltar Sucesso Cadastro //
+fecharModalCadastrese = () => {
     let modalLogin = document.querySelector(".boxLogin");
-    let modalCadastrar = document.querySelector(".modalCadastrar");
+    let modalSucessoCadastro = document.querySelector(".msgSucessoCadastro");
 
-    modalCadastrar.style.display = "none";
-    modalLogin.style.display = "flex"
+    modalLogin.style.display = "flex";
+    modalSucessoCadastro.style.display = "none";
 }

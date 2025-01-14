@@ -105,48 +105,49 @@
 
     </section>
 
+    <!--Seção Modal Cadastre-se-->
+    <section class="secaoCadastrese">
 
+        <div class="mainModalEsqueceu">
 
-    <!--Modal Cadastro-->
-    <section class="modalCadastrar">
-        <div class="boxCadastro">
+            <div class="returnCadastrese">
+                <i class="bi bi-arrow-bar-left" onclick="returnCadastrese()"></i>
+            </div>
 
-            <form>
-                <div class="inputsCadastro">
-                    <h3>Nome Completo</h3>
-                    <i class="bi bi-person-fill"></i>
-                </div>
-                <input type="text" placeholder="Digite seu Nome Completo" id="inputCadastroNome">
+            <div class="labelsIcons">
+                <h3>Nome Completo</h3>
+                <i class="bi bi-person-fill"></i>
+            </div>
+            <input type="text" placeholder="Digite seu Nome Completo" id="inputCadastro">
 
-                <div class="inputsCadastro">
-                    <h3>Email</h3>
-                    <i class="bi bi-envelope-fill"></i>
-                </div>
-                <input type="email" placeholder="Digite seu email" id="inputCadastroEmail">
+            <div class="labelsIcons">
+                <h3>Email</h3>
+                <i class="bi bi-envelope-at-fill"></i>
+            </div>
+            <input type="email" placeholder="Digite seu Email" id="inputCadastro">
 
-                <div class="inputsCadastro">
-                    <h3>Crie sua Senha</h3>
-                    <i class="bi bi-shield-lock-fill"></i>
-                </div>
-                <input type="password" placeholder="Crie uma Senha" id="inputCadastroSenha">
+            <div class="labelsIcons">
+                <h3>Criar uma Senha</h3>
+                <i class="bi bi-shield-lock-fill"></i>
+            </div>
+            <input type="password" placeholder="Crie uma nova Senha" id="inputCadastro">
 
-                <div class="inputsCadastro">
-                    <h3>Confirmar Senha</h3>
-                    <i class="bi bi-shield-fill-check"></i>
-                </div>
-                <input type="password" placeholder="Confirmar Senha" class="inputConfirmarSenha"
-                    id="inputCadastroSenha">
+            <div class="labelsIcons">
+                <h3>Confirmar Senha</h3>
+                <i class="bi bi-shield-fill-check"></i>
+            </div>
+            <input type="password" placeholder="Confirmar Senha" id="inputCadastro">
 
-                <div class="btnCadastrar">
-                    <button onclick="validarCadastro()">Cadastre-se</button>
-                </div>
+            <div class="btnRecuperarSenha">
+                <button onclick="validarCadastro()">Cadastre-se</button>
+            </div>
 
-                <div class="btnVoltarCadastro">
-                    <button onclick="returnCadastro()">
-                        <u>Voltar</u>
-                    </button>
-                </div>
-            </form>
+        </div>
+
+    </section>
+
+    <section id="msgSucessoCadastro" class="msgSucessoCadastro">
+        <div class="contentSucessoCadastro">
         </div>
     </section>
 
