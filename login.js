@@ -134,10 +134,45 @@ btnRecuperarSenha = () => {
     }
 }
 
+//Seção Modal Cadastre-se//
+
+//Abrir Modal//
 btnCadastrar = () => {
     let modalLogin = document.querySelector (".boxLogin");
     let modalCadastrar = document.querySelector (".modalCadastrar");
 
     modalLogin.style.display = "none";
     modalCadastrar.style.display = "flex";
+}
+
+//Validar Cadastro//
+validarCadastro = () => { // ATENÇÃO NECESSÁRIA //
+    let inputNome = document.getElementById("inputCadastroNome").value;
+    let inputEmail = document.getElementById("inputCadastroEmail").value;
+    let inputSenha = document.getElementById("inputCadastroSenha").value;
+
+    if(inputNome != "" && inputEmail == "admin" && inputSenha == "admin"){
+        alert("Sucesso ! Seu cadastro foi confirmado.");
+
+        document.getElementById("inputCadastroNome").value = "";
+        document.getElementById("inputCadastroEmail").value = "";
+        document.getElementById("inputCadastroSenha").value = "";
+
+    }else {
+        alert ("Algo não foi preenchido corretamente, tente novamente. (email:admin, senhas:admin)");
+        
+        document.getElementById("inputCadastroNome").value = "";
+        document.getElementById("inputCadastroEmail").value = "";
+        document.getElementById("inputCadastroSenha").value = "";
+    }
+}
+
+
+//BTN Voltar modal cadastre-se à Login//
+returnCadastro = () => {
+    let modalLogin = document.querySelector(".boxLogin");
+    let modalCadastrar = document.querySelector(".modalCadastrar");
+
+    modalCadastrar.style.display = "none";
+    modalLogin.style.display = "flex"
 }

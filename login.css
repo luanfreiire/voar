@@ -344,6 +344,7 @@ body {
         background-color: var(--second-color);
         width: 40%;
         border-radius: 20px;
+        color: var(--main-color);
     }
 
     input {
@@ -376,7 +377,7 @@ body {
 .btnCadastrar {
     display: flex;
     justify-content: center;
-    margin: 30px;
+    margin: 20px;
 
     button {
         width: 60%;
@@ -393,6 +394,26 @@ body {
 
     button:active {
         transform: translateY(7px);
+    }
+}
+
+.btnVoltarCadastro {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    button {
+        width: 30%;
+        height: 30px;
+        background: none;
+        outline: none;
+        border: none;
+        font-family: var(--font-main);
+        font-weight: bold;
+        font-style: italic;
+        font-size: 20px;
+        color: var(--main-color);
+        cursor: pointer;
     }
 }
 
@@ -482,8 +503,21 @@ body {
         margin-bottom: 10px;
     }
 
-    /*Seção Mensagem de Sucesso na Recuperação de Senha */
+    /*BTN de Retorno na Mensagem de Sucesso na Recuperação de Senha */
     .btnRetorno {
+        button {
+            width: 80%;
+        }
+    }
+
+    /*Modal Cadastre-se */
+    .modalCadastrar {
+        .boxCadastro {
+            width: 80%;
+        }
+    }
+
+    .btnCadastrar {
         button {
             width: 80%;
         }

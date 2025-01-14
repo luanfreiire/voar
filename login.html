@@ -9,11 +9,15 @@
 </head>
 
 <body>
+
+
     <section class="logotipo">
         <a href="#">
             <img src="img/logo sem fundo.png" alt="logotipo voar.com">
         </a>
     </section>
+
+
 
     <section class="boxLogin">
 
@@ -60,6 +64,8 @@
 
     </section>
 
+
+
     <!--Seção Modal Esqueceu Senha -->
     <section class="modalEsqueceuSenha">
 
@@ -99,39 +105,52 @@
 
     </section>
 
+
+
     <!--Modal Cadastro-->
     <section class="modalCadastrar">
         <div class="boxCadastro">
 
-            <div class="inputsCadastro">
-                <h3>Nome Completo</h3>
-                <i class="bi bi-person-fill"></i>
-            </div>
-            <input type="text" placeholder="Digite seu Nome Completo">
+            <form>
+                <div class="inputsCadastro">
+                    <h3>Nome Completo</h3>
+                    <i class="bi bi-person-fill"></i>
+                </div>
+                <input type="text" placeholder="Digite seu Nome Completo" id="inputCadastroNome">
 
-            <div class="inputsCadastro">
-                <h3>Email</h3>
-                <i class="bi bi-envelope-fill"></i>
-            </div>
-            <input type="email" placeholder="Digite seu email">
+                <div class="inputsCadastro">
+                    <h3>Email</h3>
+                    <i class="bi bi-envelope-fill"></i>
+                </div>
+                <input type="email" placeholder="Digite seu email" id="inputCadastroEmail">
 
-            <div class="inputsCadastro">
-                <h3>Crie sua Senha</h3>
-                <i class="bi bi-shield-lock-fill"></i>
-            </div>
-            <input type="password" placeholder="Crie uma Senha">
+                <div class="inputsCadastro">
+                    <h3>Crie sua Senha</h3>
+                    <i class="bi bi-shield-lock-fill"></i>
+                </div>
+                <input type="password" placeholder="Crie uma Senha" id="inputCadastroSenha">
 
-            <div class="inputsCadastro">
-                <h3>Confirmar Senha</h3>
-                <i class="bi bi-shield-fill-check"></i>
-            </div>
-            <input type="password" placeholder="Confirmar Senha">
+                <div class="inputsCadastro">
+                    <h3>Confirmar Senha</h3>
+                    <i class="bi bi-shield-fill-check"></i>
+                </div>
+                <input type="password" placeholder="Confirmar Senha" class="inputConfirmarSenha"
+                    id="inputCadastroSenha">
 
-            <div class="btnCadastrar">
-                <button>Cadastre-se</button>
-            </div>
+                <div class="btnCadastrar">
+                    <button onclick="validarCadastro()">Cadastre-se</button>
+                </div>
+
+                <div class="btnVoltarCadastro">
+                    <button onclick="returnCadastro()">
+                        <u>Voltar</u>
+                    </button>
+                </div>
+            </form>
         </div>
     </section>
+
+
 
     <footer>
         <div class="rodape">
