@@ -160,10 +160,6 @@ validarCadastro = () => { // ATENÇÃO NECESSÁRIA //
 
     }else {
         alert ("Algo não foi preenchido corretamente, tente novamente. (email:admin, senhas:admin)");
-        
-        document.getElementById("inputCadastroNome").value = "";
-        document.getElementById("inputCadastroEmail").value = "";
-        document.getElementById("inputCadastroSenha").value = "";
     }
 }
 
