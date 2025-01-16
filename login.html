@@ -21,16 +21,16 @@
 
     <section class="boxLogin">
 
-        <div class="formLogin">
+        <div class="modalLogin">
             <form>
 
-                <div class="iconesLogin">
+                <div class="iconesLabels">
                     <h3>E-mail</h3>
                     <i class="bi bi-envelope-fill"></i>
                 </div>
                 <input type="email" placeholder="digite seu email (admin)" id="email">
 
-                <div class="iconesLogin">
+                <div class="iconesLabels">
                     <h3>Senha</h3>
                     <i class="bi bi-shield-lock-fill"></i>
                 </div>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
 
-                <div class="btnEntrar">
+                <div class="btnPrincipal">
                     <button onclick="logar(); return false">Entrar</button>
                 </div>
 
@@ -67,23 +67,23 @@
 
 
     <!--Seção Modal Esqueceu Senha -->
-    <section class="modalEsqueceuSenha">
+    <section class="modalE_Senha">
 
-        <div class="mainModalEsqueceu">
+        <div class="modal">
             <div class="contentEsqueceuSenha">
 
-                <div class="iconesEsqueceuSenha">
+                <div class="labelsIcons">
                     <h2>Email</h2>
                     <i class="bi bi-envelope-fill"></i>
 
-                    <div class="arrowReturn">
+                    <div class="btnRetornoE_Senha">
                         <i class="bi bi-arrow-bar-left arrowReturn" onclick="btnReturn()"></i>
                     </div>
 
                 </div>
                 <input type="email" placeholder="Digite seu email . . . (admin)" id="inputEmail">
 
-                <div class="iconesEsqueceuSenha">
+                <div class="labelsIcons">
                     <h2>Confirmar Email</h2>
                     <i class="bi bi-person-check-fill"></i>
                 </div>
@@ -91,14 +91,15 @@
 
                 <p>Ao digitar um email válido, você receberá um email com instruções para recuperação de senha.</p>
 
-                <div class="btnRecuperarSenha">
+                <div class="btnPrincipal">
                     <button onclick="btnRecuperarSenha()">Recuperar Senha</button>
                 </div>
 
             </div>
 
             <!--Mensagem de Sucesso na Recuperação de Senha-->
-            <div class="contentSucesso" id="contentSucesso">
+            <!--Estrutura no arquivo login.js-->
+            <div class="msgSucessoE_Senha" id="msgSucessoE_Senha">
             </div>
 
         </div>
@@ -106,12 +107,12 @@
     </section>
 
     <!--Seção Modal Cadastre-se-->
-    <section class="secaoCadastrese">
+    <section class="secaoCadastro">
 
-        <div class="mainModalEsqueceu">
+        <div class="modal">
 
-            <div class="returnCadastrese">
-                <i class="bi bi-arrow-bar-left" onclick="returnCadastrese()"></i>
+            <div class="voltarCadastro">
+                <i class="bi bi-arrow-bar-left" onclick="voltarCadastro()"></i>
             </div>
 
             <div class="labelsIcons">
@@ -138,7 +139,7 @@
             </div>
             <input type="password" placeholder="Confirmar Senha" id="inputCadastro">
 
-            <div class="btnRecuperarSenha">
+            <div class="btnPrincipal">
                 <button onclick="validarCadastro()">Cadastre-se</button>
             </div>
 
@@ -146,8 +147,8 @@
 
     </section>
 
-    <section id="msgSucessoCadastro" class="msgSucessoCadastro">
-        <div class="contentSucessoCadastro">
+    <section id="msgS_Cadastro" class="msgS_Cadastro">
+        <div class="modalS_Cadastro">
         </div>
     </section>
 

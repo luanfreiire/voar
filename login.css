@@ -1,3 +1,7 @@
+/*Arquivo CSS Login - Voar.com
+Dev. Luan Freire - 2025*/
+
+/*Importações: Fontes (Google Fonts) e Icones (BootStrap)*/
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Oleo+Script:wght@400;700&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
@@ -7,21 +11,21 @@
     box-sizing: border-box;
 }
 
+/*Padrões: Fontes e Cores*/
 :root {
     --font-main: "Kantumruy Pro";
-    --font-title: "Oleo Script";
     --main-color: #18143C;
     --second-color: #f8a101;
     --cinza-color: #D9D9D9;
-    --preto-color: #1B1E20;
 }
 
+/*BackGround*/
 body {
     background-color: var(--main-color);
     font-family: var(--font-main);
 }
 
-/*Logotipo*/
+/*Logotipo Voar.com*/
 .logotipo {
     display: flex;
     justify-content: center;
@@ -32,23 +36,33 @@ body {
     }
 }
 
-/*SEÇÃO BOXLOGIN*/
-/*Modal Principal*/
+/*SEÇÃO Modal Login*/
+
+/*Modal Login*/
 .boxLogin {
     display: flex;
     justify-content: center;
 }
 
-.formLogin {
+/*Personalização Modal Login*/
+.modalLogin {
     background-color: var(--second-color);
     width: 50%;
     height: 25rem;
     border-radius: 20px;
     box-shadow: 8px 8px 10px black;
+
+    /*Input do Modal Login*/
+    input {
+        margin-left: 5.25rem;
+        margin-top: 10px;
+        width: 70%;
+        height: 3.13rem;
+    }
 }
 
-/*Labels e Icones*/
-.iconesLogin {
+/*Labels e Icones Modal Login*/
+.iconesLabels {
     display: flex;
     align-items: center;
     margin-left: 6.25rem;
@@ -57,18 +71,18 @@ body {
     h3 {
         font-size: 20px;
         font-style: italic;
-        font-weight: 580;
+        font-weight: bold;
         color: var(--main-color);
-        margin-right: 10px;
     }
 
     i {
         font-size: 20px;
         color: var(--main-color);
+        margin-left: 10px;
     }
 }
 
-/*Icone VER/ESCONDER senha*/
+/*BTN Visualizar senha do Input Senha*/
 .ver {
     position: absolute;
     right: 30rem;
@@ -78,6 +92,7 @@ body {
     cursor: pointer;
 }
 
+/*BTN Esconder senha do Input Senha*/
 .esconder {
     display: none;
     position: absolute;
@@ -88,51 +103,155 @@ body {
     cursor: pointer;
 }
 
-/*Inputs de Login*/
-.formLogin {
-    input {
-        margin-left: 5.25rem;
-        margin-top: 10px;
-        width: 70%;
-        height: 50px;
-        padding: 10px;
-        font-family: var(--font-main);
-        font-weight: bold;
-        border-radius: 20px;
-        outline: none;
-        border: none;
-    }
-}
+/*Opções Extras*/
 
-/*CheckBox Lembre-se*/
+/*CheckBox Lembre-se e link Esqueceu Senha*/
 .optionsExtras {
     display: flex;
     align-items: center;
     margin-top: 1rem;
 
+    /*Input CheckBox Lembre-se*/
     input {
         width: 1rem;
         height: 1rem;
         box-shadow: none;
     }
 
+    /*Label do CheckBox Lembre-se*/
     p {
         margin-left: 10px;
         margin-top: 10px;
     }
+
+    /*Link Esqueceu Senha?*/
+    .esqueceuSenha {
+        p {
+            margin-left: 12rem;
+            font-style: italic;
+            cursor: pointer;
+        }
+    }
 }
 
-/*BTN Esqueceu sua Senha ?*/
-.esqueceuSenha {
+/*Link Cadastre-se*/
+.linkCadastrar {
+    text-align: center;
+    margin-top: 10px;
+
     p {
-        margin-left: 12rem;
+        font-family: var(--font-main);
+        font-weight: bold;
         font-style: italic;
+        color: var(--main-color);
         cursor: pointer;
     }
 }
 
-/*BTN Entrar*/
-.btnEntrar {
+/*SEÇÃO Modal Esqueceu Senha*/
+/*OBS: Todas as classes que compõem este modal tem o nome da classe associado (E_Senha)*/
+
+.modalE_Senha {
+    display: none;
+    justify-content: center;
+
+     /*Legenda instrutiva para Recuperação de Senha*/
+     p {
+        max-width: 75%;
+        margin: 10px 30px;
+        opacity: 0.5;
+    }
+}
+
+/*Botão de Retorno à Página Login*/
+.btnRetornoE_Senha {
+    margin-left: 73%;
+
+    i {
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+/*Mensagem de Sucesso na Recuperação de Senha */
+.msgSucessoE_Senha {
+    display: none;
+}
+
+/*SEÇÃO Modal Cadastre-se*/
+/*OBS: Todas as classes que compõem este modal tem o nome da classe associado (Cadastro)*/
+.secaoCadastro {
+    display: none;
+    justify-content: center;
+}
+
+/*Icone de voltar*/
+.voltarCadastro {
+    position: absolute;
+    right: 23.75rem;
+
+    i {
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+
+/*Mensagem de Sucesso no cadastro*/
+.msgS_Cadastro {
+    display: none;
+    justify-content: center;
+}
+
+/*Modal de Sucesso no Cadastro*/
+.modalS_Cadastro { /*SUJEITO A ALTERAÇÕES*/
+    background-color: var(--second-color);
+    width: 50%;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px black;
+}
+
+/*Footer Voar.com*/
+
+/*Rodapé*/
+.rodape {
+    text-align: center;
+    margin: 1.25rem;
+    color: #fff;
+
+    u {
+        color: black;
+        cursor: pointer;
+    }
+}
+
+/*CLASSES GLOBAIS*/
+
+/*Inputs*/
+input {
+    background-color: var(--cinza-color);
+    font-family: var(--font-main);
+    font-weight: bold;
+    margin-left: 1.25rem;
+    width: 80%;
+    height: 3.13rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding: 12px;
+}
+
+/*Modal Padrão*/
+.modal {
+    background-color: var(--second-color);
+    width: 50%;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px black;
+}
+
+/*Botão Principal Padrão*/
+.btnPrincipal {
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -158,234 +277,33 @@ body {
     }
 }
 
-.rodape {
-    display: flex;
-    justify-content: center;
-    margin: 1.25rem;
-    color: #fff;
-
-    u {
-        color: black;
-        cursor: pointer;
-    }
-}
-
-/*BTN Cadastre-se*/
-.linkCadastrar {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-
-    p {
-        font-family: var(--font-main);
-        font-weight: bold;
-        font-style: italic;
-        color: var(--main-color);
-        cursor: pointer;
-    }
-}
-
-/*Modal Esqueceu Senha*/
-.modalEsqueceuSenha {
-    display: none;
-    justify-content: center;
-}
-
-.mainModalEsqueceu {
-    background-color: var(--second-color);
-    width: 50%;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 8px 8px 10px black;
-}
-
-/*Icones e Labels Esqueceu Senha*/
-.iconesEsqueceuSenha {
-    display: flex;
-    align-items: center;
-    margin-top: 1.25rem;
-    margin-left: 2.50rem;
-
-    h2 {
-        font-style: italic;
-        font-size: 20px;
-    }
-
-    i {
-        padding-left: 10px;
-        font-size: 22px;
-        color: var(--main-color);
-    }
-}
-
-.mainModalEsqueceu {
-
-    /*Inputs Esqueceu Senha*/
-    input {
-        background-color: var(--cinza-color);
-        font-family: var(--font-main);
-        font-weight: bold;
-        margin-left: 1.25rem;
-        width: 80%;
-        height: 3.13rem;
-        border-radius: 20px;
-        outline: none;
-        border: none;
-        padding: 12px;
-    }
-
-    /*Paragrafo do Modal*/
-    p {
-        max-width: 75%;
-        margin: 10px 30px;
-        opacity: 0.5;
-    }
-}
-
-/*Botão de Retornar*/
-.arrowReturn {
-    margin-left: 73%;
-
-    i {
-        font-size: 24px;
-        cursor: pointer;
-    }
-}
-
-/*Botão Recuperar Senha*/
-.btnRecuperarSenha {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-
-    button {
-        width: 50%;
-        height: 2.50rem;
-        background-color: var(--main-color);
-        border: none;
-        border-radius: 30px;
-        box-shadow: 4px 4px 5px black;
-        font-family: var(--font-main);
-        font-weight: bold;
-        font-size: 20px;
-        color: var(--second-color);
-        outline: none;
-        cursor: pointer;
-    }
-
-    button:active {
-        transform: translateY(5px);
-    }
-}
-
-/*Mensagem de Sucesso na Recuperação de Senha */
-.contentSucesso {
-    display: none;
-}
-
-.headerSucesso {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-
-    i {
-        font-size: 50px;
-        color: rgb(2, 102, 2);
-    }
-}
-
-.mainSucesso {
-    display: flex;
-    justify-content: center;
-
-    h3 {
-        color: rgb(2, 102, 2);
-    }
-}
-
-.footerSucesso {
-    display: flex;
-    justify-content: center;
-
-    p {
-        font-weight: bold;
-        opacity: 1;
-        text-align: center;
-    }
-}
-
-.btnRetorno {
-    display: flex;
-    justify-content: center;
-    margin: 50px;
-
-    button {
-        width: 60%;
-        height: 50px;
-        background-color: var(--main-color);
-        border: none;
-        border-radius: 30px;
-        font-size: 22px;
-        color: var(--second-color);
-        outline: none;
-        box-shadow: 4px 4px 6px black;
-        cursor: pointer;
-    }
-
-    button:active {
-        transform: translateY(7px);
-    }
-}
-
-.secaoCadastrese {
-    display: none;
-    justify-content: center;
-}
-
+/*Labels e Icones*/
 .labelsIcons {
     display: flex;
     align-items: center;
-    margin: 10px 40px;
+    margin: 8px 40px;
     color: var(--main-color);
 
     i {
         font-size: 25px;
         margin-left: 10px;
     }
-}
 
-.returnCadastrese {
-    position: absolute;
-    right: 380px;
-
-    i{
-        font-size: 25px;
-        cursor: pointer;
+    h2 {
+        font-style: italic;
+        font-size: 20px;
     }
 }
 
-/*Mensagem Sucesso Cadastro*/
-.msgSucessoCadastro {
-    display: none;
-    justify-content: center;
-}
-
-.contentSucessoCadastro {
-    background-color: var(--second-color);
-    width: 50%;
-    height: 300px;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 8px 8px 10px black;
-}
-
-.mainSucessoCadastro {
+/*Conteúdo das Mensagens de Sucesso (Cadastro, Recuperar Senha)*/
+/*Classe Presente no Arquivo login.js*/
+.mainMsgSucesso {
     text-align: center;
-    margin: 10px;
+    margin: 20px;
 
-    i{
+    i {
         font-size: 50px;
-        color:rgb(2, 102, 2);
+        color: rgb(2, 102, 2);
     }
 
     h2 {
@@ -393,118 +311,7 @@ body {
     }
 
     p{
+        opacity: 0.5;
         font-weight: bold;
-    }
-
-    button {
-        margin-top: 30px;
-        background-color: var(--main-color);
-        width: 60%;
-        height: 50px;
-        outline: none;
-        border: none;
-        border-radius: 20px;
-        font-family: var(--font-main);
-        font-weight: bold;
-        color: #f8a101;
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    button:active {
-        transform: translateY(7px);
-    }
-}
-/*RESPONSIVIDADE*/
-
-@media(max-width: 430px) {
-
-    /*Logotipo*/
-    .logotipo img {
-        width: 22vh;
-    }
-
-    /*BG Box Principal*/
-    .formLogin {
-        width: 90%;
-        height: auto;
-    }
-
-    /*Labels e Icones*/
-    .iconesLogin {
-        margin-left: 2rem;
-    }
-
-    /*Inputs*/
-    .formLogin {
-        input {
-            margin-left: 2rem;
-            width: 80%;
-        }
-    }
-
-    /*Ver/Esconder Senha*/
-    .ver {
-        display: none;
-    }
-
-    /*CheckBox Lembre-se*/
-    .optionsExtras {
-        input {
-            width: 1rem;
-        }
-    }
-
-    /*BTN Esqueceu Senha*/
-    .esqueceuSenha {
-        p {
-            margin-left: 3rem;
-        }
-    }
-
-    /*BTN Entrar*/
-    .btnEntrar {
-        margin-top: 1.88rem;
-
-        button {
-            width: 65%;
-        }
-    }
-
-    /*BTN Cadastre-se*/
-    .linkCadastrar {
-        margin: 1.25rem;
-    }
-
-    /*Rodapé*/
-    .rodape {
-        margin: 2rem;
-    }
-
-    /*Seção Modal Esqueceu Senha*/
-    .mainModalEsqueceu {
-        width: 90%;
-        height: 20.5rem;
-
-        input {
-            width: 90%;
-        }
-
-        p {
-            font-size: 14px;
-            max-width: 90%;
-        }
-    }
-
-    .arrowReturn {
-        margin-left: 55%;
-        margin-bottom: 10px;
-    }
-
-    /*BTN de Retorno na Mensagem de Sucesso na Recuperação de Senha */
-    .btnRetorno {
-        button {
-            width: 80%;
-        }
     }
 }

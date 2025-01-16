@@ -74,19 +74,19 @@ checkBox.addEventListener("change", () => {
 //Abrir Modal//
 btnEsqueceu = () => {
     let modalLogin = document.querySelector(".boxLogin");
-    let modalEsqueceuSenha = document.querySelector(".modalEsqueceuSenha");
+    let modalE_Senha = document.querySelector(".modalE_Senha");
 
-    modalEsqueceuSenha.style.display = "flex";
+    modalE_Senha.style.display = "flex";
     modalLogin.style.display = "none";
 }
 
 //Fechar Modal//
 btnReturn = () => {
     let modalLogin = document.querySelector(".boxLogin");
-    let modalEsqueceuSenha = document.querySelector(".modalEsqueceuSenha");
+    let modalE_Senha = document.querySelector(".modalE_Senha");
 
     modalLogin.style.display = "flex";
-    modalEsqueceuSenha.style.display = "none";
+    modalE_Senha.style.display = "none";
 }
 
 //BTN Recuperar Senha//
@@ -94,30 +94,24 @@ btnRecuperarSenha = () => {
     let inputEmail = document.getElementById("inputEmail").value;
     let inputConfirmarEmail = document.getElementById("inputConfirmarEmail").value;
     let contentEsqueceuSenha = document.querySelector(".contentEsqueceuSenha");
-    let contentSucesso = document.getElementById("contentSucesso");
+    let msgSucessoE_Senha = document.getElementById("msgSucessoE_Senha");
 
     if (inputEmail == "admin" && inputConfirmarEmail == "admin") {
         contentEsqueceuSenha.style.display = "none";
-        contentSucesso.style.display = "block";
+        msgSucessoE_Senha.style.display = "block";
 
         //Função Mensagem de Sucesso//
         msgSucessoEmail = () => {
-            const contentSucesso = document.getElementById("contentSucesso");
+            const msgSucessoE_Senha = document.getElementById("msgSucessoE_Senha");
 
-            contentSucesso.innerHTML = `
-                <div class="headerSucesso">
+            msgSucessoE_Senha.innerHTML = `
+                <div class="mainMsgSucesso">
                     <i class="bi bi-envelope-check-fill"></i>
-                </div>
-        
-                <div class="mainSucesso">
-                    <h3>Email enviado com Sucesso !</h3>
-                </div>
-        
-                <div class="footerSucesso">
+                    <h2>Email enviado com Sucesso !</h2>
                     <p>Verifique sua caixa Principal e Spam. No email haverá um link para alteração de Senha.</p>
-                 </div>
-        
-                <div class="btnRetorno">
+                </div>
+    
+                <div class="btnPrincipal">
                     <button onclick="btnReturn()">Voltar</button>
                 </div>`
         }
@@ -139,19 +133,19 @@ btnRecuperarSenha = () => {
 // Abrir Modal Cadastre-se //
 btnCadastrar = () => {
     let modalLogin = document.querySelector(".boxLogin");
-    let modalCadastrese = document.querySelector(".secaoCadastrese");
+    let modalCadastro = document.querySelector(".secaoCadastro");
 
     modalLogin.style.display = "none";
-    modalCadastrese.style.display = "flex";
+    modalCadastro.style.display = "flex";
 }
 
 // Btn voltar ao modal Login //
-returnCadastrese = () => {
+voltarCadastro = () => {
     let modalLogin = document.querySelector(".boxLogin");
-    let modalCadastrese = document.querySelector(".secaoCadastrese");
+    let modalCadastro = document.querySelector(".secaoCadastro");
 
     modalLogin.style.display = "flex";
-    modalCadastrese.style.display = "none";
+    modalCadastro.style.display = "none";
 }
 
 //Validação Cadastro //
@@ -159,39 +153,39 @@ validarCadastro = () => {
     let inputsCadastro = document.getElementById("inputCadastro").value;
 
     if (inputsCadastro != "") {
-        let modalCadastrese = document.querySelector(".secaoCadastrese");
-        let modalSucessoCadastro = document.getElementById("msgSucessoCadastro");
+        let secaoCadastro = document.querySelector(".secaoCadastro");
+        let msgS_Cadastro = document.getElementById("msgS_Cadastro");
 
-        modalSucessoCadastro.style.display = "flex";
-        modalCadastrese.style.display = "none";
+        msgS_Cadastro.style.display = "flex";
+        secaoCadastro.style.display = "none";
 
         msgSucessoCadastro = () => {
-            const contentSucessoCadastro = document.querySelector(".contentSucessoCadastro");
+            let modalS_Cadastro = document.querySelector(".modalS_Cadastro");
 
-            contentSucessoCadastro.innerHTML = `
+            modalS_Cadastro.innerHTML = `
             
-            <div class="mainSucessoCadastro">
+            <div class="mainMsgSucesso">
                 <i class="bi bi-person-check-fill"></i>
                 <h2>Cadastro Confirmado !</h2>
                 <p>Parabéns, seu cadastro foi realizado com sucesso ! Verifique seu email para confirmação.</p>
-                <button onclick="fecharModalCadastrese()">
-                    <u>Voltar</u>
-                </button>
+                <div class="btnPrincipal">
+                    <button onclick="fecharModalCadastro()">Voltar</button>
+                </div>    
             </div>`
         }
         msgSucessoCadastro();
         document.getElementById("inputCadastro").value = "";
 
-    }else {
+    } else {
         alert("Desculpe, algum campo não foi preenchido, tente novamente.")
     }
 }
 
 //BTN Voltar Sucesso Cadastro //
-fecharModalCadastrese = () => {
+fecharModalCadastro = () => {
     let modalLogin = document.querySelector(".boxLogin");
-    let modalSucessoCadastro = document.querySelector(".msgSucessoCadastro");
+    let msgS_Cadastro = document.querySelector(".msgS_Cadastro");
 
     modalLogin.style.display = "flex";
-    modalSucessoCadastro.style.display = "none";
+    msgS_Cadastro.style.display = "none";
 }
