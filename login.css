@@ -343,16 +343,11 @@ input {
         }
 
         /*Visualizar Senha*/
-        .ver {
-            right: 4.38rem;
-            top: 27.50rem;
+        .ver,
+        .esconder {
+            display: none; /*DEIXAR RESPONSIVO*/
         }
 
-        /*Esconder Senha*/
-        .esconder {
-            right: 4.38rem;
-            top: 27.50rem;
-        }
 
         /*Opções Extras: Esqueceu Senha ?, Lembre-se*/
         .optionsExtras {
