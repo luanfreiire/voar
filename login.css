@@ -31,7 +31,7 @@ body {
 
     img {
         width: 30vh;
-        margin: 1.25rem;
+        margin: 0.50rem;
     }
 }
 
@@ -87,7 +87,7 @@ body {
 .ver {
     position: absolute;
     right: 31rem;
-    top: 25.90rem;
+    top: 24.50rem;
     font-size: 22px;
     color: rgba(0, 0, 0, 0.380);
     cursor: pointer;
@@ -98,7 +98,7 @@ body {
     display: none;
     position: absolute;
     right: 31rem;
-    top: 25.90rem;
+    top: 24.50rem;
     font-size: 22px;
     color: rgba(0, 0, 0, 0.380);
     cursor: pointer;
@@ -345,13 +345,13 @@ input {
         /*Visualizar Senha*/
         .ver {
             right: 4.38rem;
-            top: 28.80rem;
+            top: 27.50rem;
         }
 
         /*Esconder Senha*/
         .esconder {
             right: 4.38rem;
-            top: 28.80rem;
+            top: 27.50rem;
         }
 
         /*Opções Extras: Esqueceu Senha ?, Lembre-se*/
