@@ -18,29 +18,26 @@ logar = () => {
     }
 }
 
-//Seção Ver, Esconder Senha //
+//Ver, Esconder Senha //
 //Visualizar Senha//
 verSenha = () => {
-    let verSenha = document.getElementById("senha");
-    verSenha.type = "text";
+    let inputSenha = document.getElementById("inputSenha");
+    inputSenha.type = "text";
 
-    let btnVerSenha = document.querySelector(".ver");
-    let btnEsconderSenha = document.querySelector(".esconder");
-
-    btnEsconderSenha.style.display = "block";
-    btnVerSenha.style.display = "none";
+    let ver = document.querySelector (".ver");
+    let esconder = document.querySelector(".esconder");
+    ver.style.display = "none";
+    esconder.style.display = "block";
 }
 
-//Esconder Senha//
 esconderSenha = () => {
-    let verSenha = document.getElementById("senha");
-    verSenha.type = "password";
+    let inputSenha = document.getElementById("inputSenha");
+    inputSenha.type = "password";
 
-    let btnVerSenha = document.querySelector(".ver");
-    let btnEsconderSenha = document.querySelector(".esconder");
-
-    btnVerSenha.style.display = "block";
-    btnEsconderSenha.style.display = "none";
+    let ver = document.querySelector(".ver");
+    let esconder = document.querySelector(".esconder");
+    esconder.style.display = "none";
+    ver.style.display = "block";
 }
 
 //Função Lembrar Email//

@@ -27,8 +27,7 @@ body {
 
 /*Logotipo Voar.com*/
 .logotipo {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 
     img {
         width: 30vh;
@@ -47,22 +46,24 @@ body {
 /*Personalização Modal Login*/
 .modalLogin {
     background-color: var(--second-color);
-    width: 50%;
-    height: 25rem;
+    width: 105vh;
+    margin: 10px;
+    padding: 1rem;
     border-radius: 20px;
     box-shadow: 8px 8px 10px black;
 
     /*Input do Modal Login*/
     input {
+        width: 70%;
         margin-left: 5.25rem;
         margin-top: 10px;
-        width: 70%;
         height: 3.13rem;
+        text-align: center;
     }
 }
 
 /*Labels e Icones Modal Login*/
-.iconesLabels {
+.iconesLabelsLogin {
     display: flex;
     align-items: center;
     margin-left: 6.25rem;
@@ -85,8 +86,8 @@ body {
 /*BTN Visualizar senha do Input Senha*/
 .ver {
     position: absolute;
-    right: 30rem;
-    top: 24.38rem;
+    right: 31rem;
+    top: 25.90rem;
     font-size: 22px;
     color: rgba(0, 0, 0, 0.380);
     cursor: pointer;
@@ -96,8 +97,8 @@ body {
 .esconder {
     display: none;
     position: absolute;
-    right: 30rem;
-    top: 24.38rem;
+    right: 31rem;
+    top: 25.90rem;
     font-size: 22px;
     color: rgba(0, 0, 0, 0.380);
     cursor: pointer;
@@ -111,19 +112,6 @@ body {
     align-items: center;
     margin-top: 1rem;
 
-    /*Input CheckBox Lembre-se*/
-    input {
-        width: 1rem;
-        height: 1rem;
-        box-shadow: none;
-    }
-
-    /*Label do CheckBox Lembre-se*/
-    p {
-        margin-left: 10px;
-        margin-top: 10px;
-    }
-
     /*Link Esqueceu Senha?*/
     .esqueceuSenha {
         p {
@@ -131,6 +119,22 @@ body {
             font-style: italic;
             cursor: pointer;
         }
+    }
+}
+
+.lembreseLogin {
+    display: flex;
+    align-items: center;
+
+    /*Input CheckBox Lembre-se*/
+    input {
+        width: 1rem;
+        box-shadow: none;
+    }
+
+    p {
+        margin-top: 10px;
+        margin-left: 10px;
     }
 }
 
@@ -155,8 +159,8 @@ body {
     display: none;
     justify-content: center;
 
-     /*Legenda instrutiva para Recuperação de Senha*/
-     p {
+    /*Legenda instrutiva para Recuperação de Senha*/
+    p {
         max-width: 75%;
         margin: 10px 30px;
         opacity: 0.5;
@@ -203,7 +207,8 @@ body {
 }
 
 /*Modal de Sucesso no Cadastro*/
-.modalS_Cadastro { /*SUJEITO A ALTERAÇÕES*/
+.modalS_Cadastro {
+    /*SUJEITO A ALTERAÇÕES*/
     background-color: var(--second-color);
     width: 50%;
     padding: 30px;
@@ -257,8 +262,8 @@ input {
     margin-top: 20px;
 
     button {
-        width: 40%;
-        height: 50px;
+        width: 40vh;
+        padding: 10px;
         background-color: var(--main-color);
         outline: none;
         border: none;
@@ -310,8 +315,63 @@ input {
         color: rgb(2, 102, 2);
     }
 
-    p{
+    p {
         opacity: 0.5;
         font-weight: bold;
+    }
+}
+
+/*RESPONSIVIDADE com MediaQueries*/
+
+/*Smartphones e Iphones*/
+@media(max-width: 430px) {
+    /*SEÇÃO Modal Login*/
+
+    /*MODAL LOGIN*/
+    .modalLogin {
+
+        /*Inputs Login*/
+        input {
+            margin: 0.50rem;
+            width: 90%;
+        }
+
+        /*Icones e Labels Modal Login*/
+        .iconesLabelsLogin {
+            margin-left: 2rem;
+            margin-top: 2rem;
+        }
+
+        /*Visualizar Senha*/
+        .ver {
+            right: 4.38rem;
+            top: 28.80rem;
+        }
+
+        /*Esconder Senha*/
+        .esconder {
+            right: 4.38rem;
+            top: 28.80rem;
+        }
+
+        /*Opções Extras: Esqueceu Senha ?, Lembre-se*/
+        .optionsExtras {
+            .esqueceuSenha {
+                p {
+                    margin-left: 6rem;
+                }
+            }
+        }
+
+        /*Input CheckBox Lembre-se*/
+        .lembreseLogin {
+            input {
+                width: 1rem;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
     }
 }
