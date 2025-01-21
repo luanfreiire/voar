@@ -4,7 +4,7 @@
 //Função de Validação de Login //
 logar = () => {
     let email = document.getElementById("email").value;
-    let senha = document.getElementById("senha").value;
+    let senha = document.getElementById("inputSenha").value;
 
     if (email == "admin" && senha == "admin") {
         location.href = "home.html";
@@ -14,7 +14,7 @@ logar = () => {
     } else {
         alert("Usuário ou Senha incorretos, por favor tente novamente ou crie sua conta.");
         document.getElementById("email").value = "";
-        document.getElementById("senha").value = "";
+        document.getElementById("inputSenha").value = "";
     }
 }
 
