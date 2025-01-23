@@ -3,7 +3,7 @@
 <p>O Voar.com é um projeto web que visa simular uma agência de viagens online, com foco em voos nacionais. Seu principal objetivo é consolidar conhecimentos em desenvolvimento web,
   utilizando tecnologias como HTML5, CSS, JavaScript e Figma para prototipação.
 
-A primeira etapa do projeto, a página de Login, já está disponível(https://voarpontocom.netlify.app/). As próximas etapas incluem o desenvolvimento da página inicial (Home), onde o usuário poderá realizar
+A primeira etapa do projeto, a página de Login, já está disponível (https://voarpontocom.netlify.app/). As próximas etapas incluem o desenvolvimento da página inicial (Home), onde o usuário poderá realizar
 buscas por voos, pacotes e promoções, e a página de Checkout para finalização de compras e pagamentos online.</p>
 
 <h2>Tecnologias 🤖</h2>
