@@ -22,50 +22,45 @@
     <section class="boxLogin">
 
         <div class="modalLogin">
-            <form>
 
-                <div class="iconesLabelsLogin">
-                    <h3>E-mail</h3>
-                    <i class="bi bi-envelope-fill"></i>
-                </div>
-                <input type="email" placeholder="digite seu email (admin)" id="email">
+            <div class="iconesLabelsLogin">
+                <h3>E-mail</h3>
+                <i class="bi bi-envelope-fill"></i>
+            </div>
+            <input type="email" placeholder="digite seu email (admin)" id="email">
 
-                <div class="iconesLabelsLogin">
-                    <h3>Senha</h3>
-                    <i class="bi bi-shield-lock-fill"></i>
-                </div>
+            <div class="iconesLabelsLogin">
+                <h3>Senha</h3>
+                <i class="bi bi-shield-lock-fill"></i>
+            </div>
 
-                <div class="verEsconderSenha">
-                    <i class="bi bi-eye-fill ver" onclick="verSenha()"></i>
-                    <i class="bi bi-eye-slash-fill esconder" onclick="esconderSenha()"></i>
-                </div>
-                <input type="password" placeholder="digite sua senha... (admin)" id="inputSenha">
+            <div class="verEsconderSenha">
+                <i class="bi bi-eye-fill ver" onclick="verSenha()"></i>
+                <i class="bi bi-eye-slash-fill esconder" onclick="esconderSenha()"></i>
+            </div>
+            <input type="password" placeholder="digite sua senha...(admin)" id="inputSenha">
 
-                <div class="optionsExtras">
+            <div class="optionsExtras">
 
-                    <div class="lembreseLogin">
-                        <input type="checkbox" onclick="salvarEmail()" id="checkBoxSalvar">
-                        <p>Lembrar</p>
-                    </div>
-
-                    <div class="esqueceuSenha">
-                        <p onclick="btnEsqueceu()">
-                            <u>Esqueceu sua Senha ?</u>
-                        </p>
-                    </div>
+                <div class="pgLembrar">
+                    <input type="checkbox" onclick="salvarEmail()" id="checkBoxSalvar">
+                    <p>Lembrar</p>
                 </div>
 
-                <div class="btnPrincipal">
-                    <button onclick="logar(); return false">Entrar</button>
-                </div>
+                <p onclick="btnEsqueceu()">
+                    <u>Esqueceu sua Senha ?</u>
+                </p>
+            </div>
 
-                <div class="linkCadastrar">
-                    <p onclick="btnCadastrar()">
-                        <u>Cadastre-se</u>
-                    </p>
-                </div>
-            </form>
-        </div>
+            <div class="btnPrincipal">
+                <button onclick="logar()">Entrar</button>
+            </div>
+
+            <div class="linkCadastrar">
+                <p onclick="btnCadastrar()">
+                    <u>Cadastre-se</u>
+                </p>
+            </div>
 
     </section>
 
@@ -77,15 +72,14 @@
         <div class="modal">
             <div class="contentEsqueceuSenha">
 
-                <div class="labelsIcons">
-                    <h2>Email</h2>
-                    <i class="bi bi-envelope-fill"></i>
-
-                    <div class="btnRetornoE_Senha">
-                        <i class="bi bi-arrow-bar-left" onclick="btnReturn()"></i>
+                <div class="headerModalE_Senha">
+                    <div class="labelsIcons">
+                        <h2>Email</h2>
+                        <i class="bi bi-envelope-fill"></i>
                     </div>
-
+                    <i class="bi bi-arrow-bar-left voltarLogin" onclick="btnReturn()"></i>
                 </div>
+
                 <input type="email" placeholder="Digite seu email . . . (admin)" id="inputEmail">
 
                 <div class="labelsIcons">
@@ -116,14 +110,14 @@
 
         <div class="modal">
 
-            <div class="voltarCadastro">
-                <i class="bi bi-arrow-bar-left" onclick="voltarCadastro()"></i>
+            <div class="headerModalCadastro">
+                <div class="labelsIcons">
+                    <h3>Nome Completo</h3>
+                    <i class="bi bi-person-fill"></i>
+                </div>
+                <i class="bi bi-arrow-bar-left voltarCadastro" onclick="voltarCadastro()"></i>
             </div>
 
-            <div class="labelsIcons">
-                <h3>Nome Completo</h3>
-                <i class="bi bi-person-fill"></i>
-            </div>
             <input type="text" placeholder="Digite seu Nome Completo" id="inputCadastro">
 
             <div class="labelsIcons">

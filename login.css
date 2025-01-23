@@ -45,40 +45,40 @@ body {
 
 /*Personalização Modal Login*/
 .modalLogin {
-    background-color: var(--second-color);
-    width: 90vh;
-    margin: 10px;
+    display: grid;
     padding: 1rem;
+    background-color: var(--second-color);
+    width: 80vh;
+    margin: 20px;
     border-radius: 20px;
     box-shadow: 8px 8px 10px black;
 
-    /*Input do Modal Login*/
     input {
-        width: 70%;
-        margin-left: 5.25rem;
-        margin-top: 10px;
-        height: 3.13rem;
-        text-align: center;
+        width: 100%;
+        height: 7vh;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        padding: 10px;
+        font-family: var(--font-main);
+        font-weight: bold;
     }
 }
 
 /*Labels e Icones Modal Login*/
 .iconesLabelsLogin {
     display: flex;
-    align-items: center;
-    margin-left: 6.25rem;
-    margin-top: 2.13rem;
+    padding: 0.80rem;
+    color: var(--main-color);
 
     h3 {
         font-size: 20px;
         font-style: italic;
         font-weight: bold;
-        color: var(--main-color);
     }
 
     i {
         font-size: 20px;
-        color: var(--main-color);
         margin-left: 10px;
     }
 }
@@ -89,8 +89,8 @@ body {
 
     i {
         position: absolute;
-        right: 15vh;
-        top: 3.50vh;
+        right: 3vh;
+        top: 1.50vh;
         font-size: 22px;
         color: rgba(0, 0, 0, 0.380);
         cursor: pointer;
@@ -106,35 +106,25 @@ body {
 /*CheckBox Lembre-se e link Esqueceu Senha*/
 .optionsExtras {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
+    margin: 0.70rem;
 
-    /*Link Esqueceu Senha?*/
-    .esqueceuSenha {
-        position: relative;
-        margin: 0 auto;
-
-        p {
-            margin-left: 4rem;
-            font-style: italic;
-            cursor: pointer;
-        }
-    }
-}
-
-.lembreseLogin {
-    display: flex;
-    align-items: center;
-
-    /*Input CheckBox Lembre-se*/
     input {
         width: 1rem;
-        box-shadow: none;
     }
 
-    p {
-        margin-top: 10px;
-        margin-left: 10px;
+    .pgLembrar {
+        display: flex;
+        align-items: center;
+
+        p {
+            margin-left: 0.30rem;
+        }
+    }
+
+    u {
+        cursor: pointer;
     }
 }
 
@@ -155,6 +145,35 @@ body {
 /*SEÇÃO Modal Esqueceu Senha*/
 /*OBS: Todas as classes que compõem este modal tem o nome da classe associado (E_Senha)*/
 
+/*Modal Esqueceu Senha*/
+.contentEsqueceuSenha {
+    input {
+        width: 80%;
+        height: 7vh;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        padding: 10px;
+        font-family: var(--font-main);
+        font-weight: bold;
+    }
+}
+
+/*Header do Modal Esqueceu Senha*/
+.headerModalE_Senha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+
+    .voltarLogin {
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--main-color);
+    }
+}
+
+/*Modal de Sucesso na Recuperação de Senha*/
 .modalE_Senha {
     display: none;
     justify-content: center;
@@ -167,7 +186,7 @@ body {
     }
 }
 
-/*Botão de Retorno à Página Login*/
+/*Botão de Retorno ao Login */
 .btnRetornoE_Senha {
     position: relative;
     left: 70vh;
@@ -178,7 +197,7 @@ body {
     }
 }
 
-/*Mensagem de Sucesso na Recuperação de Senha */
+/*Mensagem de Sucesso na Recuperação de Senha (Arquivo .js) */
 .msgSucessoE_Senha {
     display: none;
 }
@@ -188,16 +207,28 @@ body {
 .secaoCadastro {
     display: none;
     justify-content: center;
+
+    input {
+        width: 80%;
+        height: 7vh;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        padding: 10px;
+        font-family: var(--font-main);
+        font-weight: bold;
+    }
 }
 
-/*Icone de voltar*/
-.voltarCadastro {
-    position: absolute;
+.headerModalCadastro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
 
-    i {
-        position: relative;
-        left: 95vh;
-        font-size: 25px;
+    .voltarCadastro {
+        font-size: 24px;
+        color: var(--main-color);
         cursor: pointer;
     }
 }
@@ -235,20 +266,6 @@ body {
 
 /*CLASSES GLOBAIS*/
 
-/*Inputs*/
-input {
-    background-color: var(--cinza-color);
-    font-family: var(--font-main);
-    font-weight: bold;
-    margin-left: 1.25rem;
-    width: 80%;
-    height: 3.13rem;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    padding: 12px;
-}
-
 /*Modal Padrão*/
 .modal {
     background-color: var(--second-color);
@@ -266,7 +283,7 @@ input {
     margin-top: 20px;
 
     button {
-        width: 40vh;
+        width: 50%;
         padding: 10px;
         background-color: var(--main-color);
         outline: none;
@@ -290,8 +307,8 @@ input {
 .labelsIcons {
     display: flex;
     align-items: center;
-    margin: 8px 40px;
     color: var(--main-color);
+    margin: 20px;
 
     i {
         font-size: 25px;
@@ -327,41 +344,17 @@ input {
 
 /*RESPONSIVIDADE com MediaQueries*/
 
-/*Smartphones e Iphones*/
 @media(max-width: 430px) {
+    
     /*SEÇÃO Modal Login*/
 
     /*MODAL LOGIN*/
     .modalLogin {
 
-        /*Inputs Login*/
-        input {
-            margin: 0.20rem;
-            width: 90%;
-        }
-
-        /*Icones e Labels Modal Login*/
-        .iconesLabelsLogin {
-            margin-left: 2rem;
-            margin-top: 1rem;
-        }
-
         /*Visualizar/Esconder senha*/
         .verEsconderSenha {
             i {
-                right: 5vh;
                 top: 2vh;
-            }
-        }
-
-        /*Input CheckBox Lembre-se*/
-        .lembreseLogin {
-            input {
-                width: 1rem;
-            }
-
-            p {
-                margin: 0;
             }
         }
     }
@@ -369,39 +362,6 @@ input {
     /*MODAL Esqueceu sua Senha?*/
     .btnRetornoE_Senha {
         left: 16vh;
-    }
-
-    /*MODAL Cadastre-se*/
-    .voltarCadastro {
-        i {
-            left: 32vh;
-        }
-    }
-
-    /*CLASSES GLOBAIS*/
-    .btnPrincipal {
-        button {
-            width: 25vh;
-            font-size: 2vh;
-        }
-    }
-
-}
-
-/*Tablets e Ipads*/
-@media (max-width: 810px) {
-
-    /*Modal Login*/
-    /*Ver/Esconder Senha*/
-    .verEsconderSenha {
-        i {
-            top: 2.15vh
-        }
-    }
-
-    /*MODAL Esqueceu sua Senha ? */
-    .btnRetornoE_Senha {
-        left: 48vh;
     }
 
     /*MODAL Cadastre-se*/
